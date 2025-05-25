@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+   font-family: "Ubuntu" , sans-serif;
+   box-sizing: border-box;
+   scroll-behaviour: smooth;
+   text-decoration: none;
+   list-style: none;
+}
+
+:root {
+   --Blue-970 /*deeper blue*/: hsl(213, 96%, 18%)
+   --Blue-950 /*deep blue of text*/: hsl(190, 96%, 18%);
+   --Purple-600 /*deep purple of active*/: hsl(243, 100%, 62%);
+   --Blue-300 /*a little darker than bkground*/: hsl(228, 100%, 84%);
+   --Blue-200 /*blue of nav icons*/: hsl(206, 94%, 87%);
+   --Red-500 /*red of thank you icon*/: hsl(354, 84%, 57%);
+   --Grey-500 /*general text color*/: hsl(231, 20%, 70%);
+   --Purple-200 /*purple of text*/: hsl(229, 24%, 87%);
+   --Blue-100 /*blue of background*/: hsl(218, 100%, 97%);
+   --Blue-50 /*lighter than background for active states tabs and monthly-yearly toggle*/: hsl(231, 100%, 99%);
+   --White: hsl(0, 100%, 100%)
+}
+
+html, body {
+   overflow-x: hidden;
+}
+
+body {
+   background-color: hsl(218, 100%, 97%);
+}
+
+.sidebar {
+   position: relative;
+   width: 100%;
+   height: 100px;
+   top: 0;
+   right: 0; 
+   left: 0;
+}
+
+
+.sidebar img {
+   width: 100%;/* 135px */
+   position: absolute;
+}
+
+.navMenu {
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   margin-bottom: 0;
+   z-index: 1;
+}
+
+.navMenu ul {
+   padding: 30px 80px;/* 30px 80px */
+   margin: 0 25px;/* 0 25px */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;/* center */
+   align-items: center;
+}
+
+.navMenu ul li {
+   margin: 5px;
+   padding: 5px 10px;
+   color: var(--Blue-300);
+   font-size: 15px;
+   border: solid 2px;
+   border-radius: 50px;
+   transition: .45s;
+}
+
+.navMenu a {
+   color: var(--Blue-300);
+   font-size: 15px;
+   font-weight: 500;
+   transition: all .45s ease;
+}
+
+.navMenu a:hover, .navMenu a:active {
+   background-color: var(--Blue-300);
+}
+
+.navMenu #s2 {
+   background-color: var(--Blue-300);
+}
+
+.navMenu #s2 a {
+   color: midnightblue;
+}
+
+.form-step {
+   justify-content: center;
+   align-items: center;
+   background-color: var(--White);
+   padding: 20px 17px;
+   margin-right: 15px;
+   margin-left: 15px;
+   margin-top: -14px;
+   height: 65vh;
+   max-height: 100vh;
+   position: absolute;
+   z-index: 2;
+   align-items: center;
+   justify-content: center;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+   font-size: 22px;
+   font-family: Ubuntu;
+   font-weight: bold;
+   color: darkslategray;
+   margin-bottom: 10px;
+}
+
+p {
+   font-size: 14px;
+   font-family: Ubuntu;
+   font-weight: 400;
+   color: var(--Grey-500);
+   margin-bottom: 15px;
+   line-height: 1.5;
+}
+
+.info-form form {
+   position: relative;
+}
+
+.info-form form input {
+   width: 100%;
+   padding: 8px 10px;   
+   border: solid 0.2px var(--Grey-500);
+   border-radius: 3px;
+   outline: none;
+   margin-top: 2px;
+   margin-bottom: -5px;
+}
+
+.info-form form input::placeholder {
+   color: var(--Grey-500);
+   font-weight: bolder;
+}
+
+.info-form label {
+   font-size: 12px;
+   font-family: ubuntu;
+   font-weight: 500;   
+   color: darkslategray;
+}
+
+.footer {
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   background-color: var(--White);
+   left:0;
+   bottom: 0;
+   width: 100%;
+   padding: 10px 15px;
+}
+
+.footer .sub button {
+   border: solid 2px hsl(213, 96%, 18%);
+   border-radius: 5px;
+   padding: 7px 7px;
+   margin-left: 20em;
+   right: 0;
+   bottom: 0;
+   background-color: #173965;/* 95% MNBlue */
+   color: var(--Blue-200);
+   width: 30%;
+   font-family: ubuntu;
+   font-size: 0.65em;
+   font-weight: bold;
+}
+
+.footer .sub button a {
+   text-decoration: none;
+   background-color: #173965;/* 95% MNBlue */
+   color: var(--Blue-200);
+}
+ 
+/* select plan */
+
+#step2 {
+   height: 72vh;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 5px auto 5px;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d6d9e6;
+  border-radius: 10px;
+  padding: 8px auto 150px;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.plans img {
+   padding-left: 0.5em;
+}
+
+.plans #plan2 img {
+   padding-top: 0.5em;
+}
+
+.plans #plan2 {
+   margin-bottom: -0.5em;
+}
+
+.plan.selected:active {
+  border-color: var(--Purple-600);
+  background-color: var(--Blue-100);
+}
+
+.plan h2 {
+  margin: 0;
+  font-family: ubuntu;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+  color: darkslategray;
+}
+
+.plans .plan2-2 .price {
+   gap: 1rem;
+   color: var(--Grey-500);
+   font-size: 1.5em;
+   font-weight: bold;
+}
+
+.plans #price {
+   margin-bottom: -15px;
+   font-size: 0.6em;
+}
+
+.plans .free {
+   font-size: 0.8em;
+   margin-bottom: 12px;
+   margin-top: 0.15em;
+   color: darkslategray;
+   letter-spacing: -1px;
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  background: var(--Blue-50);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.billing-toggle span {
+   font-size: 10px;
+}
+
+.billing-toggle #monthly-label {
+   color: darkslategray;
+   font-weight: bold;
+   font-size: 0.8em;
+}
+
+.billing-toggle #monthly-label-2 {
+   color: var(--Grey-500);
+}
+
+.billing-toggle #yearly-label {
+   color: var(--Grey-500);
+   font-size: 0.8em;
+   font-weight: bolder;
+}
+
+.billing-toggle #yearly-label-2 {
+   color: var(--Blue-950);
+   font-weight: bold;
+}
+
+.billing-toggle .active {
+   color: var(--Blue-950);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider, #slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #02295a;
+  border-radius: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider {
+   left: 0;
+}
+
+#slider {
+   right: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+input:checked + #slider:before {
+  transform: translateX(20px);
+}
+
+.footer .sub2 .back-btn,
+.footer .sub2 .next-btn {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+.footer .sub2 .back-btn {
+  bottom: 0;
+  rigt: 0;
+  width: 30%;
+  border: none;
+  background: none;
+  white-space: nowrap;
+}
+
+.footer .sub2 .back-btn a {
+   text-decoration: none;
+   color: var(--Grey-500);
+}
+
+.footer .sub2 .next-btn {
+  border: none;
+  background-color: #173965;
+  color: white;
+  border-radius: 5px;
+}
+
+.footer .sub2 .next-btn a {
+   text-decoration: none;
+   color: var(--Blue-200);
+}
+
+.footer #sub2 {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.footer #sub2 .next-btn {
+   margin-left: 10em;
+   white-space: nowrap;
+}
+/* add ons */
+.addon {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 1em;
+  transition: all 0.3s ease;
+}
+
+.addon label {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  cursor: pointer;
+  gap: 1em;
+}
+
+.addon input[type="checkbox"] {
+  accent-color: #483eff;
+  width: 15px;
+  height: 15px;
+}
+
+.addon input[type="checkbox"]:target {
+   border: solid 2px purple;
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+  display: block;
+  font-size: 0.8rem;
+  color: darkslategray;
+}
+
+.desc {
+  font-size: 0.6em;
+  color: gray;
+}
+
+.form-step .addon .price {
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: #483eff;
+}
+
+.yearly {
+  display: none;
+}
+
+#billing-toggle:checked ~ section .monthly {
+  display: none;
+}
+
+#billing-toggle:checked ~ section .monthly:active {
+   color: purple;
+}
+#billing-toggle:checked ~ section .yearly {
+  display: inline;
+}
+
+.summary {
+  background-color: #f8f9fe;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1.5em 0;
+}
+
+.plan-row,
+.addon-row,
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+
+.summary strong {
+   color: darkslategray;
+   font-size: 0.9em;
+}
+
+.summary a {
+   text-decoration: underline;
+   color: var(--Grey-500);
+   font-size: 0.8em;
+}
+
+.summary .plan-row .price {
+   font-size: 0.9em;
+   font-weight: bolder;
+   padding-top: 1em;
+   color: darkslategray;
+}
+
+.summary .addon-row span {
+   font-size: 0.8em;
+   font-weight: bold;
+   color: var(--Grey-500);
+}
+
+.summary .addon-row .price {
+   color: darkslategray;
+}
+
+.total-row {
+  padding: 1em 0.8em;
+}
+
+.total-row span {
+   font-weight: bold;
+   font-size: 0.8em;
+   color: var(--Grey-500);
+}
+
+.total-row .total-price {
+   color: var(--Purple-600);
+   font-size: 0.9em;
+   margin-left: -0.2em;
+}
+
+.footer .buttons #next-btn {
+  border: none;
+  background-color: var(--Purple-600);
+  color: white;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
+
+.footer .buttons #next-btn a {
+   text-decoration: none;
+   background-color: var(--Purple-600);
+   color: white;
+}
+
+#step5 {
+   text-align: center;
+   height: 60vh;
+}
+
+#step5 img {
+   Height: 2.8em;
+   margin: 3em auto 1em;
+   padding-bottom: -3em;
+}
