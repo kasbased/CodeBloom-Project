@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Select Plan-yearly</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container" id="container">
+      <!-- sidebar -->
+      <div class="sidebar">
+         <img src="bg-sidebar-mobile.svg" alt="sidebar">
+         <div class="navMenu">
+            <ul>
+            <li><a href="index.html">1</a></li>
+            <li class="active" id="s2"><a href="select-plan.html">2</a></li>
+            <li><a href="add-ons.html">3</a></li>
+            <li><a href="fin-up.html">4</a></li>
+         </ul>
+         </div>
+      </div><!-- sidebar close -->
+      
+      <!-- form step -->
+      <div class="form-step" id="step2">
+         <h1>Select your plan</h1>
+         <p class="subtext">You have the option of monthly or yearly billing.</p>
+         
+         <!-- form bills -->
+         
+      <div class="plans">
+            <div class="plan selected" class="psc" data-plan="Arcade" data-monthly="9" data-yearly="90">
+               <img src="icon-arcade.svg" alt="Arcade icon" />
+               <div>
+                  <h2>Arcade</h2>
+                  <p class="price">$9/mo</p>
+            </div>
+         </div>
+
+         <div class="plan" class="psc" data-plan="Advanced" data-monthly="12" data-yearly="120">
+        <img src="icon-advanced.svg" alt="Advanced icon" />
+        <div>
+          <h2>Advanced</h2>
+          <p class="price">$12/mo</p>
+        </div>
+      </div>
+
+      <div class="plan" class="psc" data-plan="Pro" data-monthly="15" data-yearly="150">
+        <img src="icon-pro.svg" alt="Pro icon" />
+        <div>
+          <h2>Pro</h2>
+          <p class="price">$15/mo</p>
+        </div>
+      </div>
+    </div>
+<!-----------Billing toggle ---------->
+    <div class="billing-toggle">
+      <span id="monthly-label" class="active">Monthly</span>
+      <label class="switch">
+        <input type="checkbox" id="billing-toggle"/>
+        <a href="select-plan-2.html"><span class="slider"></span></a>
+      </label>
+      <span id="yearly-label">Yearly</span>
+    </div>
+
+    </div>
+ </div><!-- form bills end -->
+      
+<footer class="footer">
+   <div class="sub2">
+      <button class="back-btn"><a href="p-info.html">Go back</a></button>
+   </div>
+   
+   <div class="sub2">
+      <button class="next-btn"><a href="add-ons.html">Next Step</a></button>
+   </div>
+</footer>
+   
+</body>
+</html>

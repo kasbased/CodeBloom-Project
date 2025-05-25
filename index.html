@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+   <title>CodeBloom Project</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+      <!-- sidebar -->
+      <div class="sidebar">
+         <img src="bg-sidebar-mobile.svg" alt="sidebar">
+         <!--  -->
+         
+         <div class="navMenu">
+            <ul>
+            <li class="active" id="s2"><a href="p-info.html">1</a>
+            </li>
+            <li><a href="select-plan.html">2</a></li>
+            <li><a href="add-ons.html">3</a></li>
+            <li><a href="fin-up.html">4</a></li> 
+         </ul>
+         </div>
+      </div><!-- sidebar close -->
+      
+      <!-- form step -->
+      <div class="form-step" id="step1">
+         <h1>Personal info</h1>
+         <p class="subtext">Please provide your name, email address, and phone number.</p>
+         
+         <!-- form normal-->
+         <div class="info-form" id="infoForm">
+            <form action="" target="_blank" method="post">
+            <label for="name" >Name</label><br>
+            <input type="text" id="name" name="fullname" placeholder="e.g Stephen King" required><br><br>
+            <label for="email" >Email Address</label><br>
+            <input type="email" id="email" name="email" placeholder="e.g stephenking@lorem.com" required><br><br>
+            <label for="tpn" >Phone Number</label><br>
+            <input type="tel" id="tpn" name="phone-number" placeholder="e.g +1 234 567 890" required>
+         </form>
+         </div>
+         
+      </div> <!-- form-step close div -->
+   </div><!-- container -->
+   <br>
+   
+<footer class="footer">
+   <div class="sub">
+      <button class="next"><a href="select-plan.html" id="nextBtn">Next Step</a></button>
+   </div>
+</footer>
+
+<!-- js -->
+<script>
+  document.getElementById('nextBtn').addEventListener('click', function(event) {
+    const form = document.getElementById('infoForm');
+
+    if (!form.checkValidity()) {
+      event.preventDefault();
+      form.reportValidity();
+    }
+    // else: form is valid, link will work
+  });
+</script>
+
+</body>
+</html>
+
