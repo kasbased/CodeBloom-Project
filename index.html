@@ -7,22 +7,43 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="container">
-      <!-- sidebar -->
-      <div class="sidebar">
-         <img src="bg-sidebar-mobile.svg" alt="sidebar">
-         <!--  -->
-         
-         <div class="navMenu">
+   <div class="container" id="container">
+      <nav class="navMenu">
             <ul>
-            <li class="active" id="s2"><a href="p-info.html">1</a>
-            </li>
-            <li><a href="select-plan.html">2</a></li>
-            <li><a href="add-ons.html">3</a></li>
-            <li><a href="fin-up.html">4</a></li> 
+            <li class="step-active" id="s2">
+               <span class="step-number"><a href="index.html">1</a></span>
+               <div class="step-label">
+                  <span class="step-title">STEP 1</span><br>
+                  <span class="step-desc">YOUR INFO</span>
+               </div>
+            </li>  <!-- li 1 -->
+            
+            <li class="step">
+               <span class="step-number"><a href="select-plan.html">2</a></span>
+             <div class="step-label">
+                  <span class="step-title">STEP 2</span><br>
+                  <span class="step-desc">SELECT PLAN</span>
+               </div>
+            </li> <!-- link 2 -->
+            
+            
+            <li class="step">
+               <span class="step-number"><a href="add-ons.html">3</a></span>
+               <div class="step-label">
+                  <span class="step-title">STEP 3</span><br>
+                  <span class="step-desc">ADD ONS</span>
+               </div>
+            </li><!-- link 3 -->
+            
+            
+            <li class="step">
+               <span class="step-number"><a href="fin-up.html">4</a></span>
+               <div class="step-label">
+                  <span class="step-title">STEP 4</span><br>
+                  <span class="step-desc">SUMMARY</span>
+               </div></li><!-- link 4 -->  
          </ul>
-         </div>
-      </div><!-- sidebar close -->
+      </nav>
       
       <!-- form step -->
       <div class="form-step" id="step1">
@@ -34,7 +55,7 @@
             <form action="" target="_blank" method="post">
             <label for="name" >Name</label><br>
             <input type="text" id="name" name="fullname" placeholder="e.g Stephen King" required><br><br>
-            <label for="email" >Email Address</label><br>
+            <label for="email">Email Address</label><br>
             <input type="email" id="email" name="email" placeholder="e.g stephenking@lorem.com" required><br><br>
             <label for="tpn" >Phone Number</label><br>
             <input type="tel" id="tpn" name="phone-number" placeholder="e.g +1 234 567 890" required>
