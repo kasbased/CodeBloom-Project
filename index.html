@@ -10,8 +10,8 @@
    <div class="container" id="container">
       <nav class="navMenu">
             <ul>
-            <li class="step-active" id="s2">
-               <span class="step-number"><a href="index.html">1</a></span>
+            <li class="step-active">
+               <span class="step-number" id="s2"><a href="index.html">1</a></span>
                <div class="step-label">
                   <span class="step-title">STEP 1</span><br>
                   <span class="step-desc">YOUR INFO</span>
@@ -63,27 +63,30 @@
          </div>
          
       </div> <!-- form-step close div -->
+      
    </div><!-- container -->
    <br>
    
 <footer class="footer">
    <div class="sub">
-      <button class="next"><a href="select-plan.html" id="nextBtn">Next Step</a></button>
+      <button class="next" onclick="goToNextStep()"><a href="select-plan.html" id="nextBtn">Next Step</a></button>
    </div>
 </footer>
 
 <!-- js -->
-<script>
-  document.getElementById('nextBtn').addEventListener('click', function(event) {
-    const form = document.getElementById('infoForm');
 
-    if (!form.checkValidity()) {
-      event.preventDefault();
-      form.reportValidity();
+<script>
+  function goToNextStep() {
+    if (validateCurrentStep()) {
+      // Proceed to next step
+      console.log("All inputs valid. Go to step 2.");
+      // Example: showStep(2);
+    } else {
+      console.log("Invalid inputs. Stay on current step.");
     }
-    // else: form is valid, link will work
-  });
+  }
 </script>
+
 
 </body>
 </html>
