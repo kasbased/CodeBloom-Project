@@ -604,8 +604,8 @@ hr {
     margin: 12em auto auto 2em;
     position: relative;
     background-color: #fff;
-    min-height: 50vh;    
-    height: 30%;
+    min-height: 30vh;    
+    height: 50%;
     min-width: 50vw;
     width: 90%;
   }
