@@ -603,9 +603,8 @@ hr {
     padding: 1em; /* 2em */
     margin: 12em auto auto 2em;
     position: relative;
-    background-color: #fff;
-    min-height: 30vh;    
-    height: 50%;
+    background-color: #fff;    
+    height: 50vh;
     min-width: 50vw;
     width: 90%;
   }
